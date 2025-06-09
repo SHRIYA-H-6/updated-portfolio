@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>More Information</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #f3e9d2, #e0c097);
+      color: #4b2e2e;
+      padding: 40px 20px;
+      animation: fadeIn 1s ease-in-out;
+      background-attachment: fixed;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fffaf0;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .container:hover {
+      transform: scale(1.015);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    h1, h2 {
+      color: #5a2c2c;
+      font-style: italic;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 1.5rem;
+      text-decoration: underline;
+      animation: slideIn 0.5s ease-in-out;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      margin: 2rem 0 1rem;
+      text-decoration: underline dotted;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    dl, ul {
+      margin-left: 30px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    dt {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    a {
+      color: #7b2e2e;
+      font-weight: bold;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #4b2e2e;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 1.6em;
+      }
+
+      h2 {
+        font-size: 1.2em;
+      }
+    }
+
+    /* Keyframes */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>More About Me: Passion, Skills & Experience</h1>
+
+    <h2>1. Skills</h2>
+    <dl>
+      <dt>Technical Skills:</dt>
+      <dd>~ Python</dd>
+      <dd>~ HTML and CSS</dd>
+      <dd>~ Basic Cybersecurity Foundations</dd>
+      <dd>~ Arduino</dd>
+      <dd>~ MATLAB</dd><br>
+      <dt>Non-Technical Skills:</dt>
+      <dd>~ Creative Thinking</dd>
+      <dd>~ Leadership</dd>
+      <dd>~ Public Speaking</dd>
+      <dd>~ Teamwork</dd>
+    </dl>
+
+    <h2>2. Certifications & Achievements</h2>
+    <ul>
+      <li><a href="https://www.coursera.org/account/accomplishments/verify/LTGOG1KQ80DV">Google Cybersecurity Foundations</a></li>
+      <li><a href="https://www.coursera.org/account/accomplishments/verify/878V4QEWHU39">IBM Introduction to AI</a></li>
+      <li><a href="https://www.coursera.org/account/accomplishments/verify/XOF8KX7SNEU3">AI on Microsoft Azure</a></li>
+    </ul>
+
+    <h2>3. Interests & Hobbies</h2>
+    <ul>
+      <li>Story Writing</li>
+      <li>Debating</li>
+      <li>Event Management</li>
+      <li>Content Creation</li>
+    </ul>
+
+    <h2>4. Education</h2>
+    <dl>
+      <dt>1. Bharatiya Vidya Bhavan's</dt>
+      <dd>~ 2011–2015</dd>
+      <dt>2. Kendriya Vidyalaya</dt>
+      <dd>~ 2015–2022</dd>
+      <dt>3. Sri Chaitanya Junior College</dt>
+      <dd>~ 2022–2024</dd>
+      <dt>4. Amrita Vishwa Vidyapeetham</dt>
+      <dd>~ 2024–2028</dd>
+    </dl>
+  </div>
+</body>
+</html>

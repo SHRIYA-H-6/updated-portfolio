@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shriya H - Portfolio</title>
+  <link rel="stylesheet" href="mystyle.css">
+  <style>
+    /* Minimal Enhancements */
+body {
+  animation: fadeIn 1s ease-in;
+  background: url("https://static.vecteezy.com/system/resources/previews/025/502/603/non_2x/aesthetic-and-boho-banner-abstract-modern-background-with-brown-colors-and-white-flowers-background-with-space-for-text-floral-banner-template-vector.jpg") no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .name {
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  text-align: center;
+  color: #4b2e1a;
+  animation: slideIn 1.2s ease;
+}
+
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .navv a {
+      margin: 0 15px;
+      transition: transform 0.3s ease;
+    }
+
+    .navv a:hover {
+      transform: scale(1.1);
+    }
+
+    .icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%; /* make icons circular */
+      object-fit: cover;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .icon:hover {
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    }
+
+.projects {
+  background: #f2e8dc; /* soft beige */
+  padding: 40px 30px;
+  margin: 40px auto;
+  max-width: 1000px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(100, 80, 50, 0.1);
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+  border: 1px solid #e0d6c3;
+}
+
+.projects:hover {
+  box-shadow: 0 0 30px rgba(100, 80, 50, 0.2);
+  transform: translateY(-5px);
+}
+
+.projects h2 {
+  text-align: center;
+  font-size: 2em;
+  font-style: italic;
+  color: #5c3a21;
+  margin-bottom: 30px;
+}
+
+.project-item {
+  background: #fffaf3;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  border-left: 5px solid #a67c52;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.project-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.project-item h3 {
+  color: #4b2e1a;
+  margin-bottom: 10px;
+}
+
+.project-item p {
+  color: #5c3a21;
+  font-size: 0.95em;
+}
+
+
+
+    h2 {
+      transition: color 0.3s ease;
+    }
+
+    h2:hover {
+      color: #a0522d;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    input:focus {
+      box-shadow: 0 0 5px rgba(131, 5, 5, 0.4);
+      border-color: #833;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navv">
+      <a href="about.html" target="_blank">
+        <img src="https://i.pinimg.com/736x/a8/bc/68/a8bc68a7c768c1930e294fb3b763699c.jpg" alt="about" class="icon">
+      </a>
+      <a href="https://www.instagram.com/sshri.yaa" target="_blank">
+        <img src="https://i.pinimg.com/736x/07/85/ea/0785ea05f0997145b75f7827b0d58445.jpg" alt="insta" class="icon">
+      </a>
+      <a href="https://www.linkedin.com/in/shriya-h-633601341/" target="_blank">
+        <img src="https://i.pinimg.com/736x/54/0a/4e/540a4e5a787c49805b2a04bdee241d3d.jpg" alt="linkedin" class="icon">
+      </a>
+      <a href="mailto:h.shriya.2005@gmail.com" class="email">
+ <img src="https://i.pinimg.com/736x/c6/6c/62/c66c6205dd83c16ec81e97c50bad41c3.jpg" alt="gmail" class="icon">
+      </a>
+    </div>
+  </nav>
+
+  <div class="new">
+    <img src="https://i.pinimg.com/1200x/94/32/d2/9432d2df3adb4a2f3bd29a577da6a4f1.jpg" alt="CompSci img" class="image">
+    <h1 class="name">‎ ‎ ‎ ‎ ‎ ‎ Shriya H</h1>
+  </div>
+  <hr class="hrr">
+
+  <div class="bio">
+    <h2>~ About me ~</h2>
+    <ul>
+      <li>I’m a First-Year BTech CSE student at Amrita Vishwa Vidyapeetham Amritapuri with a passion for tech, leadership, and innovation.</li>
+      <li>As a class representative and social media manager at Amrita Amritapuri Toastmasters Club, I excel in communication, teamwork, leadership, and strategic planning.</li>
+      <li>I enjoy learning and exploring new concepts within the Tech community!</li>
+      <li>I bring creative solutions to every project I take on!</li>
+    </ul>
+  </div>
+
+  <div class="projects">
+    <h2>~ My Projects ~</h2>
+    <div class="project-item">
+      <h3>Survey Form</h3>
+      <p>A simple, responsive feedback form that collects user name, email, feedback, and rating, submitting data via PHP.</p>
+      <a href="file2.html" target="_blank">View Project</a>
+    </div>
+    <div class="project-item">
+      <h3>Portfolio Website</h3>
+      <p>A design of my current portfolio.</p>
+      <a href="index.html" target="_blank">View Project</a>
+    </div>
+    <div class="project-item">
+      <h3>Pricing Table</h3>
+      <p>A responsive pricing table displaying different plans with features and a call-to-action button, optimized for various screen sizes.</p>
+      <a href="file1.html" target="_blank">View Project</a>
+    </div>
+    <div class="project-item">
+      <h3>To-Do List</h3>
+      <p>This responsive To-Do List features a clean UI with a warm color scheme, ensuring a visually appealing and structured layout for task tracking.</p>
+      <a href="file3.html" target="_blank">View Project</a>
+    </div>
+  </div>
+
+  <footer>
+    <br>
+    <h2>~ Contact Me ~</h2>
+    <form class="contact-form" action="submit_contact.php" method="POST">
+      <label for="contact-name">Name:</label>
+      <input type="text" id="contact-name" name="contact-name" required>
+      <label for="contact-email">Email:</label>
+      <input type="email" id="contact-email" name="contact-email" required>
+    </form>
+    <br><br>
+    <center><p>© 2025 Shriya H. All rights reserved.</p></center>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>✨ Survey Form ✨</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://wallpapers.com/images/featured/brown-pastel-aesthetic-379r48zf0xa66b3k.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .survey-container {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 35px;
+      border-radius: 20px;
+      max-width: 550px;
+      width: 100%;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+      animation: fadeIn 0.6s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .survey-container:hover {
+      transform: scale(1.015);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .survey-container h2 {
+      text-align: center;
+      color: #442c1e;
+      margin-bottom: 25px;
+      font-weight: bold;
+      font-size: 1.9em;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+      color: #3d2b23;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 18px;
+      border: 1px solid #a67c52;
+      border-radius: 10px;
+      font-size: 15px;
+      background: rgba(255, 255, 255, 0.8);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: #8b5e3c;
+      box-shadow: 0 0 6px rgba(139, 94, 60, 0.4);
+      outline: none;
+    }
+
+    .options-group {
+      margin-bottom: 18px;
+    }
+
+    .gender-group {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+    }
+
+    .gender-group label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(250, 235, 215, 0.8);
+      padding: 10px 14px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 14px;
+      flex: 1;
+      justify-content: center;
+      min-width: 100px;
+      transition: background 0.3s ease;
+    }
+
+    .gender-group input[type="radio"] {
+      margin: 0;
+    }
+
+    .gender-group label:hover {
+      background: #f2dfc9;
+    }
+
+    button {
+      width: 100%;
+      background: #6d2d2d;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #833d3d;
+    }
+
+    @media (max-width: 480px) {
+      .survey-container {
+        padding: 20px;
+      }
+
+      input, textarea, select {
+        padding: 10px;
+      }
+
+      .gender-group {
+        flex-direction: column;
+      }
+
+      button {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="survey-container">
+    <h2>✨ Survey Form ✨</h2>
+    <form action="submit_survey.php" method="POST">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" min="10" max="100" required>
+
+      <label>Gender</label>
+      <div class="gender-group">
+        <label><input type="radio" name="gender" value="Male"> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Other"> Other</label>
+      </div>
+
+      <label for="feedback">Your Feedback</label>
+      <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+      <label for="rating">Rating</label>
+      <select id="rating" name="rating" required>
+        <option value="">Select a rating</option>
+        <option value="1">1 - Poor</option>
+        <option value="2">2 - Fair</option>
+        <option value="3">3 - Good</option>
+        <option value="4">4 - Very Good</option>
+        <option value="5">5 - Excellent</option>
+      </select>
+
+      <label>What are you interested in?</label>
+      <div class="options-group">
+        <input type="checkbox" id="web" name="interest" value="Web Dev">
+        <label for="web">Web Development</label><br>
+        <input type="checkbox" id="ai" name="interest" value="AI">
+        <label for="ai">AI & ML</label><br>
+        <input type="checkbox" id="cyber" name="interest" value="Cybersecurity">
+        <label for="cyber">Cybersecurity</label><br>
+        <input type="checkbox" id="design" name="interest" value="Design">
+        <label for="design">UI/UX Design</label>
+      </div>
+
+      <label>How did you hear about us?</label>
+      <div class="options-group">
+        <input type="radio" id="social" name="source" value="Social Media">
+        <label for="social">Social Media</label><br>
+        <input type="radio" id="friend" name="source" value="Friend">
+        <label for="friend">Friend</label><br>
+        <input type="radio" id="search" name="source" value="Search">
+        <label for="search">Search Engine</label>
+      </div>
+
+      <label for="suggestions">Any suggestions?</label>
+      <textarea id="suggestions" name="suggestions" rows="3"></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </div>
+</body>
+</html>
